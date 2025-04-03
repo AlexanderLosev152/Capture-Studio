@@ -1,0 +1,23 @@
+.h1 {
+  font-weight: 500;
+  font-size: clamp(4rem, 7vw, 6.25rem);
+  line-height: 105%;
+  @include media($tablet) {
+    font-size: clamp(3rem, 5vw, 4rem);
+  }
+}
+
+.h2 {
+  font-weight: 500;
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  line-height: 100%;
+  letter-spacing: -0.02em;
+}
+
+.h3 {
+  font-weight: 500;
+  font-size: clamp(2.5rem, 7vw, 6.25rem);
+  line-height: 105%;
+  letter-spacing: -0.02em;
+  text-align: center;
+}

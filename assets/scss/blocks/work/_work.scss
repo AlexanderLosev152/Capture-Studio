@@ -1,0 +1,35 @@
+.work {
+  background: $bg-section;
+  &__title {
+    margin-bottom: clamp(1rem, 5vw, 4.375rem);
+  }
+  &__wrapper {
+    @include grid(clamp(10rem, 25vw, 20rem), 24px);
+    @include media($mobile) {
+      display: none;
+    }
+  }
+  &__swiper {
+    display: none;
+    @include media($mobile) {
+      display: block;
+    }
+  }
+  &__box {
+    margin-bottom: 1rem;
+    @include media($mobile) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &--img {
+      margin-bottom: 1.25rem;
+      border: $border;
+      text-align: center;
+    }
+    &--date {
+      display: block;
+    }
+  }
+}

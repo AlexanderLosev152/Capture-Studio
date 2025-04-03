@@ -1,0 +1,15 @@
+.footer {
+  background: $bg-section;
+  &__top {
+    padding-top: 2rem;
+    margin-bottom: clamp(1rem, 6vw, 5rem);
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: $border;
+    padding-block: clamp(1rem, 2.5vw, 2.2rem);
+    font-size: clamp(0.7rem, 1vw, 1rem);
+  }
+}

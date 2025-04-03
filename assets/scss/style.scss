@@ -1,0 +1,95 @@
+@import "./default/normalize";
+@import "./default/vars";
+@import "./default/mixins";
+@import "./default/media";
+@import "./default/fonts";
+@import "./default/reset";
+@import "./default/container";
+@import "./default/typogpafy";
+
+@import "./blocks/header/header";
+@import "./blocks/hero/hero";
+@import "./blocks/work/work";
+@import "./blocks/portraits/portraits";
+@import "./blocks/contact/contact";
+@import "./blocks/footer/footer";
+
+body {
+  font-family: $font-family;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $color-accent;
+  background: $linear-gradient;
+  @include media($tablet) {
+    font-size: 0.8rem;
+  }
+}
+
+.logo {
+  position: relative;
+  z-index: 100;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.section {
+  padding-block: clamp(1rem, 6vw, 5rem);
+  @include media($mobile) {
+    padding-block: 1rem;
+    text-align: center;
+  }
+}
+
+.btn {
+  padding: 0.5em 1rem;
+  border-radius: 3px;
+  border: $border;
+}
+
+.pagination {
+  text-align: center;
+  .swiper-pagination-bullet {
+    margin-top: 1rem;
+    background: $color-accent;
+  }
+  .swiper-pagination-bullet-active {
+    transform: scale(1.2);
+  }
+}
+
+.mobile {
+  display: none;
+  position: relative;
+  z-index: 100;
+  @include media($tablet) {
+    display: grid;
+    gap: 0.5rem;
+    span {
+      width: 2rem;
+      height: 0.2rem;
+      background: $color-accent;
+      transition: transform 1s;
+    }
+  }
+}
+
+.mobile.open {
+  transition: transform 0.5s;
+  span:nth-child(1) {
+    transform: rotate(-45deg);
+    transition: transform 0.5s;
+  }
+  span:nth-child(2) {
+    display: none;
+  }
+  span:nth-child(3) {
+    transform: rotate(45deg);
+    position: relative;
+    top: -12px;
+    transition: transform 0.5s;
+  }
+}
+
+// ==========================

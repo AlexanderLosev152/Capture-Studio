@@ -1,0 +1,90 @@
+.header {
+  margin-top: 24px;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.nav {
+  ul {
+    display: flex;
+    gap: clamp(0.5rem, 1vw, 1rem);
+    @include media($tablet) {
+      display: none;
+    }
+    li {
+      a {
+        font-weight: 400;
+        font-size: 1rem;
+        color: $color-accent;
+        padding: 0.5rem 1rem;
+        text-wrap: nowrap;
+        border: 2px solid transparent;
+        border-radius: 3px;
+        transition: border 0.5s;
+        @include hover {
+          border: $border;
+        }
+      }
+    }
+  }
+}
+
+.nav.open {
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $bg-section;
+  }
+}
+
+/* Начальная настройка: скрыть все элементы */
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav ul li {
+  opacity: 0; /* Скрываем элементы */
+  transform: translateY(-20px); /* Сдвигаем элементы вверх */
+  animation: fadeInUp 0.5s ease-out forwards; /* Анимация для появления */
+}
+
+.nav ul li:nth-child(1) {
+  animation-delay: 0.1s; /* Задержка для первого элемента */
+}
+.nav ul li:nth-child(2) {
+  animation-delay: 0.2s; /* Задержка для второго элемента */
+}
+.nav ul li:nth-child(3) {
+  animation-delay: 0.3s; /* Задержка для третьего элемента */
+}
+.nav ul li:nth-child(4) {
+  animation-delay: 0.4s; /* Задержка для четвертого элемента */
+}
+.nav ul li:nth-child(5) {
+  animation-delay: 0.5s; /* Задержка для пятого элемента */
+}
+
+/* Определение анимации */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

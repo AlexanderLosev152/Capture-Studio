@@ -1,0 +1,16 @@
+.contact {
+  background: $bg-section;
+  &__wrapper {
+    display: grid;
+    justify-items: center;
+    max-width: 42.125rem;
+  }
+  &__title {
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  &__descr {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+}

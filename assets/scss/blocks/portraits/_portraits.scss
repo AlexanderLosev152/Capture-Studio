@@ -1,0 +1,52 @@
+.portraits {
+  margin-bottom: 2rem;
+  &__wrapper {
+    @include media($mobile) {
+      display: none;
+    }
+  }
+  &__mySwiper {
+    display: none;
+    @include media($mobile) {
+      display: block;
+    }
+  }
+  &__box {
+    @include grid(25rem, 5rem);
+    align-items: center;
+    @include media($tablet-big) {
+      @include grid(15rem, 2rem);
+    }
+    img {
+      border: $border;
+    }
+  }
+  &__box:nth-child(2) {
+    img {
+      order: 1;
+    }
+    div {
+      order: 2;
+    }
+  }
+  &__text {
+    max-width: 28.125rem;
+  }
+  &__date {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  &__title {
+    margin-bottom: 1.5rem;
+  }
+  &__descr {
+    margin-bottom: 2.5rem;
+  }
+  &__colection {
+    display: grid;
+    justify-items: center;
+    gap: clamp(1rem, 2vw, 2rem);
+    margin-top: 2rem;
+  }
+}

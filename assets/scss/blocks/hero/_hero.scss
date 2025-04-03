@@ -1,0 +1,25 @@
+.hero {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: clamp(20rem, 50vw, 42.5rem) auto;
+    align-items: center;
+    gap: 1rem;
+    @include media($mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+  p {
+    max-width: 430px;
+  }
+}
+
+.hero__text {
+  opacity: 0; /* Скрыть текст по умолчанию */
+  transform: translateX(-100px); /* Сдвинуть текст влево */
+  transition: opacity 1s ease, transform 1s ease; /* Плавный переход */
+}
+
+.hero__text.visible {
+  opacity: 1; /* Текст становится видимым */
+  transform: translateX(0); /* Возвращаем текст на место */
+}
