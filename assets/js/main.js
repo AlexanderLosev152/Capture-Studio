@@ -37,23 +37,4 @@ links.forEach((el) => {
 
 // =====================
 
-// Получаем элемент
-const heroText = document.querySelector(".hero__text");
-
-// Функция для проверки видимости элемента на экране
-function checkVisibility() {
-  const rect = heroText.getBoundingClientRect();
-  if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-    heroText.classList.add("visible"); // Добавляем класс, когда элемент в области видимости
-  }
-}
-
-// Проверяем видимость при прокрутке
-window.addEventListener("scroll", checkVisibility);
-
-// Проверка сразу при загрузке страницы
-checkVisibility();
-
-// =================
-
 AOS.init();
