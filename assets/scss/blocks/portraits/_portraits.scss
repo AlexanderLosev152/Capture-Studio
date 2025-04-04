@@ -19,6 +19,9 @@
     }
     img {
       border: $border;
+      @include media($mobile) {
+        // height: 20rem;
+      }
     }
   }
   &__box:nth-child(2) {
@@ -42,6 +45,9 @@
   }
   &__descr {
     margin-bottom: 2.5rem;
+    @include media($mobile) {
+      min-height: 8rem;
+    }
   }
   &__colection {
     display: grid;

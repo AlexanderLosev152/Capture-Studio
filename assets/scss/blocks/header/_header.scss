@@ -1,5 +1,7 @@
 .header {
   margin-top: 24px;
+  width: min($container-w, 100% - ($container-p * 2));
+  margin-inline: auto;
   &__wrapper {
     display: flex;
     align-items: center;

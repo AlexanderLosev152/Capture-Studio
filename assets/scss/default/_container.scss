@@ -1,4 +1,5 @@
 .container {
   width: min($container-w, 100% - ($container-p * 2));
   margin-inline: auto;
+  overflow: hidden;
 }
