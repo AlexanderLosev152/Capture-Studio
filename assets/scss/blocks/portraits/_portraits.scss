@@ -42,6 +42,9 @@
   }
   &__title {
     margin-bottom: 1.5rem;
+    @include media($mobile) {
+      text-align: center;
+    }
   }
   &__descr {
     margin-bottom: 2.5rem;
